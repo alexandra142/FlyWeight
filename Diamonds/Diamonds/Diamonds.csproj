@@ -63,6 +63,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DiamondX.cs" />
+    <Compile Include="DiamondButterFly.cs" />
+    <Compile Include="DiamondRhombus.cs" />
+    <Compile Include="DiamondPlus.cs" />
+    <Compile Include="DiamondCircle.cs" />
+    <Compile Include="DiamondStar.cs" />
+    <Compile Include="DiamondSquare.cs" />
+    <Compile Include="DiamondNone.cs" />
+    <Compile Include="DiamondType.cs" />
+    <Compile Include="IDiamond.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
