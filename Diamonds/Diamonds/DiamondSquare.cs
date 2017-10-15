@@ -1,5 +1,6 @@
-﻿using System;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace Diamonds
 {
@@ -7,7 +8,17 @@ namespace Diamonds
     {
         public void Draw(int x, int y, Canvas canvas)
         {
-            throw new NotImplementedException();
+            var rect = new Rectangle
+            {
+                Stroke = Brushes.Blue,
+                Fill = Brushes.CornflowerBlue,
+                StrokeThickness = 2,
+                Width = Constants.Modul,
+                Height = Constants.Modul
+            };
+            Canvas.SetLeft(rect, x);
+            Canvas.SetTop(rect, y);
+            canvas.Children.Add(rect);
         }
     }
 }

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Diamonds"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="850" Width="850">
     <Grid>
-        <Canvas  Name="MyCanvas" HorizontalAlignment="Left" Height="301" Margin="10,10,0,0" VerticalAlignment="Top" Width="498"/>
+        <Canvas  Name="MyCanvas" HorizontalAlignment="Left" Height="800" Margin="10,10,0,0" VerticalAlignment="Top" Width="800"/>
 
     </Grid>
 </Window>

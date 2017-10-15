@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Constants.cs" />
     <Compile Include="DiamondX.cs" />
     <Compile Include="DiamondButterFly.cs" />
     <Compile Include="DiamondRhombus.cs" />
