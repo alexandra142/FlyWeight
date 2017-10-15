@@ -10,8 +10,21 @@ namespace Diamonds
         public MainWindow()
         {
             InitializeComponent();
-            DiamondSquare square = new DiamondSquare();
-            square.Draw(10,10,MyCanvas);
+            IDiamond none = new DiamondNone();
+            none.Draw(10, 10, MyCanvas);
+
+            IDiamond square = new DiamondSquare();
+            square.Draw(110,10,MyCanvas);
+
+            IDiamond star = new DiamondStar();
+            star.Draw(210, 10, MyCanvas);
+
+            IDiamond circle = new DiamondCircle();
+            circle.Draw(310, 10, MyCanvas);
+
+            //todo nevykresluje sa mi line
+            IDiamond diamondX = new DiamondX();
+            diamondX.Draw(410, 10, MyCanvas);
         }
     }
 }
