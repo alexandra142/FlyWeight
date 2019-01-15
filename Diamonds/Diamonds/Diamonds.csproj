@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="DiamondRepository.cs" />
     <Compile Include="DiamondX.cs" />
     <Compile Include="DiamondButterFly.cs" />
     <Compile Include="DiamondRhombus.cs" />
