@@ -12,9 +12,9 @@ namespace Diamonds
             PointCollection points = new PointCollection
             {
                 new Point(x, y),
-                new Point(x+80, y + 80),
-                new Point(x + 80, y ),
-                new Point(x, y + 80)
+                new Point(x+Constants.Modul, y + Constants.Modul),
+                new Point(x + Constants.Modul, y ),
+                new Point(x, y + Constants.Modul)
             };
 
             var polygon = new Polygon
