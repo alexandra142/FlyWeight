@@ -22,9 +22,11 @@ namespace Diamonds
             IDiamond circle = new DiamondCircle();
             circle.Draw(310, 10, MyCanvas);
 
-            //todo nevykresluje sa mi line
             IDiamond diamondX = new DiamondX();
             diamondX.Draw(410, 10, MyCanvas);
+
+            IDiamond diamondPlus = new DiamondPlus();
+            diamondPlus.Draw(510, 10, MyCanvas);
         }
     }
 }
