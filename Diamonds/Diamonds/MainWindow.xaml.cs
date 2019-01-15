@@ -30,6 +30,9 @@ namespace Diamonds
 
             IDiamond diamondRhombus = new DiamondRhombus();
             diamondRhombus.Draw(610, 10, MyCanvas);
+
+            IDiamond diamondButterfly = new DiamondButterFly();
+            diamondButterfly.Draw(710, 10, MyCanvas);
         }
     }
 }

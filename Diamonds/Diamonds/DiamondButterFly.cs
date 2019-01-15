@@ -1,13 +1,31 @@
-﻿using System;
+﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace Diamonds
 {
-    class DiamondButterFly : IDiamond
+    internal class DiamondButterFly : IDiamond
     {
         public void Draw(int x, int y, Canvas canvas)
         {
-            throw new NotImplementedException();
+            PointCollection points = new PointCollection
+            {
+                new Point(x, y),
+                new Point(x+80, y + 80),
+                new Point(x + 80, y ),
+                new Point(x, y + 80)
+            };
+
+            var polygon = new Polygon
+            {
+                Points = points,
+                Fill = Brushes.GreenYellow
+            };
+
+            Canvas.SetLeft(polygon, 1);
+            Canvas.SetTop(polygon, 3);
+            canvas.Children.Add(polygon);
         }
     }
 }
