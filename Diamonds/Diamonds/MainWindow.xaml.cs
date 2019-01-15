@@ -27,6 +27,9 @@ namespace Diamonds
 
             IDiamond diamondPlus = new DiamondPlus();
             diamondPlus.Draw(510, 10, MyCanvas);
+
+            IDiamond diamondRhombus = new DiamondRhombus();
+            diamondRhombus.Draw(610, 10, MyCanvas);
         }
     }
 }
