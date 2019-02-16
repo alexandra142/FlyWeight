@@ -7,11 +7,12 @@ namespace Diamonds
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-            TestDrawRow1(10,10);
-            TestDrawRow2(10, 10 + Constants.RowWidth);
+            // TestDrawRow1(10,10);
+            Play(10, 10 + Constants.RowWidth);
 
         }
 
@@ -49,15 +50,16 @@ namespace Diamonds
             diamondButterfly.Draw(xStart, yStart, MyCanvas);
         }
 
-        private void TestDrawRow2(int xStart, int yStart)
+        private void Play(int xStart, int yStart)
         {
             IDiamondDrawer drawer = new DiamondDrawer();
-            for (int i = 0; i < 7; i++)
-            {
-                var diamond = drawer.Next();
-                diamond.Draw(xStart, yStart, MyCanvas);
-                xStart += Constants.ColumnWidth;
-            }
+            IDiamondBoard diamondBoard = new DiamondBoard(drawer, 7, 7, MyCanvas);
+            //for (int i = 0; i < 7; i++)
+            //{
+            //    var diamond = drawer.Next();
+            //    diamond.Draw(xStart, yStart, MyCanvas);
+            //    xStart += Constants.ColumnWidth;
+            //}
 
         }
     }

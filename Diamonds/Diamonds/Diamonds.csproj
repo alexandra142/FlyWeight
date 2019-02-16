@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Constants.cs" />
+    <Compile Include="DiamondBoard.cs" />
     <Compile Include="DiamondFactory.cs" />
     <Compile Include="DiamondRepository.cs" />
     <Compile Include="DiamondX.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="DiamondType.cs" />
     <Compile Include="IDiamond.cs" />
     <Compile Include="DiamondDrawer.cs" />
+    <Compile Include="IDiamondBoard.cs" />
     <Compile Include="IDiamondDrawer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
