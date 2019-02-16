@@ -10,29 +10,55 @@ namespace Diamonds
         public MainWindow()
         {
             InitializeComponent();
+            TestDrawRow1(10,10);
+            TestDrawRow2(10, 10 + Constants.RowWidth);
+
+        }
+
+        private void TestDrawRow1(int xStart, int yStart)
+        {
             IDiamond none = new DiamondNone();
-            none.Draw(10, 10, MyCanvas);
+            none.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond square = new DiamondSquare();
-            square.Draw(110,10,MyCanvas);
+            square.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond star = new DiamondStar();
-            star.Draw(210, 10, MyCanvas);
+            star.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond circle = new DiamondCircle();
-            circle.Draw(310, 10, MyCanvas);
+            circle.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond diamondX = new DiamondX();
-            diamondX.Draw(410, 10, MyCanvas);
+            diamondX.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond diamondPlus = new DiamondPlus();
-            diamondPlus.Draw(510, 10, MyCanvas);
+            diamondPlus.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond diamondRhombus = new DiamondRhombus();
-            diamondRhombus.Draw(610, 10, MyCanvas);
+            diamondRhombus.Draw(xStart, yStart, MyCanvas);
 
+            xStart += Constants.ColumnWidth;
             IDiamond diamondButterfly = new DiamondButterFly();
-            diamondButterfly.Draw(710, 10, MyCanvas);
+            diamondButterfly.Draw(xStart, yStart, MyCanvas);
+        }
+
+        private void TestDrawRow2(int xStart, int yStart)
+        {
+            IDiamondDrawer drawer = new DiamondDrawer();
+            for (int i = 0; i < 7; i++)
+            {
+                var diamond = drawer.Next();
+                diamond.Draw(xStart, yStart, MyCanvas);
+                xStart += Constants.ColumnWidth;
+            }
+
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Diamonds
 {
-    interface IDiamond
+    public interface IDiamond
     {
         void Draw(int x, int y, Canvas canvas);
     }

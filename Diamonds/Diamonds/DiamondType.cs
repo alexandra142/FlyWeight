@@ -1,6 +1,6 @@
 ﻿namespace Diamonds
 {
-    enum DiamondType
+    public enum DiamondType
     {
         None,
         Square,

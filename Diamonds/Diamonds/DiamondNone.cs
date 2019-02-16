@@ -2,7 +2,7 @@
 
 namespace Diamonds
 {
-    class DiamondNone : IDiamond
+    public class DiamondNone : IDiamond
     {
         public void Draw(int x, int y, Canvas canvas)
         {
