@@ -17,5 +17,8 @@ namespace Diamonds
         IDiamond Next();
 
         void Draw(IDiamond diamond, int x, int y, Canvas canvas);
+
+        void DrawNone(int x, int y, Canvas canvas);
+
     }
 }

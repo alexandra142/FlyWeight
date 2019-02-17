@@ -38,5 +38,9 @@ namespace Diamonds
             diamond.Draw(x, y, canvas);
         }
 
+        public void DrawNone(int x, int y, Canvas canvas)
+        {
+            _diamonds[0].Draw(x, y, canvas);
+        }
     }
 }

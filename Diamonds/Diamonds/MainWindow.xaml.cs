@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Diamonds
 {
@@ -7,7 +9,7 @@ namespace Diamonds
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        IDiamondBoard _diamondBoard;
         public MainWindow()
         {
             InitializeComponent();
@@ -53,7 +55,10 @@ namespace Diamonds
         private void Play(int xStart, int yStart)
         {
             IDiamondDrawer drawer = new DiamondDrawer();
-            IDiamondBoard diamondBoard = new DiamondBoard(drawer, 7, 7, MyCanvas);
+             _diamondBoard = new DiamondBoard(drawer, 7, 7, MyCanvas);
+
+            //System.Threading.Thread.Sleep(5000);
+
             //for (int i = 0; i < 7; i++)
             //{
             //    var diamond = drawer.Next();
@@ -61,6 +66,14 @@ namespace Diamonds
             //    xStart += Constants.ColumnWidth;
             //}
 
+        }
+
+        private void Test(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (e.ButtonState == MouseButtonState.Pressed)
+                Debug.WriteLine(e.GetPosition(this));
+
+            _diamondBoard.Change(1, 1, 1, 2);
         }
     }
 }
